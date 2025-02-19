@@ -15,7 +15,7 @@ const Todo = ({ todo }: TodoProps) => {
 
   const [isEditing, setIsEditing] = useState(false);
   const [editedTaskTitle, setEditedTaskTitle] = useState(todo.text);
-
+// 編集ボタンを押下した際にinputに自動でフォーカスする
   useEffect(() =>{
     if(isEditing){
       ref.current?.focus();
