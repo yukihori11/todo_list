@@ -9,6 +9,7 @@ interface TodoProps {
   todo: Task;
 }
 
+// export default functionでもOK（最後のexportは削除）
 const Todo = ({ todo }: TodoProps) => {
   const router = useRouter();
   const ref = useRef<HTMLInputElement>(null)
