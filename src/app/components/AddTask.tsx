@@ -1,10 +1,13 @@
 'use client';
 
 import { addTodo } from "@/api";
+import { Akaya_Kanadaka } from "next/font/google";
 import { useRouter } from "next/navigation";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import {v4 as uuidv4} from "uuid";
 
+
+// コメントの追加
 
 const AddTask = () => {
   const router = useRouter();
