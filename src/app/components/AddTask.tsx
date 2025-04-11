@@ -1,10 +1,13 @@
 'use client';
 
 import { addTodo } from "@/api";
+import { Akaya_Kanadaka } from "next/font/google";
 import { useRouter } from "next/navigation";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import {v4 as uuidv4} from "uuid";
 
+
+// コメントの追加
 
 const AddTask = () => {
   const router = useRouter();
@@ -16,7 +19,7 @@ const AddTask = () => {
     await addTodo({id:uuidv4(), text: taskTitle});
 
     setTaskTitle("")
-    // 更新処理を行わなければ、画面の情報のままになってしまうため
+    // 更新処理を行わなければ、画面の情報のままになってしまうため　
     router.refresh();
   };
 
